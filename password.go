@@ -8,7 +8,7 @@ import (
 )
 
 func (a Account) defaultPassword() string {
-	return fmt.Sprintf(`%s%02d`, a.Class.Name, a.Number)
+	return fmt.Sprintf(`%s%02d`, "0000")
 }
 
 func generatePassword(password string) []byte {
@@ -43,7 +43,7 @@ func (h Handler) resetPassword(w http.ResponseWriter, r *http.Request) {
 
 	if !accountPermission(acct, account) {
 		w.WriteHeader(403)
-		h.resetPage(w, addMessage(r, "您沒有權限變更 "+account.Name+" 的密碼"))
+		h.resetPage(w, addMessage(r, "您沒有權限變更 "+account.ID+" 的密碼"))
 		return
 	}
 
@@ -70,7 +70,7 @@ func (h Handler) resetPassword(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	h.message(w, r, "重設密碼成功", "已重設 "+account.Name+" 的密碼")
+	h.message(w, r, "重設密碼成功", "已重設 "+account.ID+" 的密碼")
 }
 
 func (a *Account) resetSelfPassword(current, new string) error {
