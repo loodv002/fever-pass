@@ -35,7 +35,6 @@ func (r AccountRecords) CSV() []string {
 		r.Account.ID,
 		r.Class.Name,
 		strconv.Itoa(r.Number),
-		r.Name,
 	}
 	if r.Recorded {
 		data = append(data, []string{
