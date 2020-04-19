@@ -100,7 +100,7 @@ func (a Authority) String() string {
 		return "導師"
 
 	case Hygiene:
-		return "衛生股長"
+		return "服務股長"
 
 	case Student:
 		return "學生"
