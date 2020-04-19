@@ -85,7 +85,7 @@ func (h Handler) newRecord(w http.ResponseWriter, r *http.Request) {
 
 	record := Record{
 		Account:    account,
-		RecordedBy: acct,
+		RecordedBy: account,
 		Reason:     r.FormValue("reason"),
 	}
 
@@ -162,7 +162,7 @@ func (h Handler) newSelfRecord(w http.ResponseWriter, r *http.Request) {
 
 	record := Record{
 		Account:    acct,
-		RecordedBy: acct,
+		RecordedBy: account,
 		Reason:     r.FormValue("reason"),
 	}
 
