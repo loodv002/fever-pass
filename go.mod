@@ -9,7 +9,7 @@ require (
 	github.com/gorilla/securecookie v1.1.1
 	github.com/jinzhu/gorm v1.9.12
 	github.com/joho/godotenv v1.3.0
-	github.com/russross/blackfriday v2.0.0+incompatible
+	gopkg.in/russross/blackfriday.v2 v2.0.0+incompatible
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/stretchr/testify v1.5.1 // indirect
 	golang.org/x/crypto v0.0.0-20191205180655-e7c4368fe9dd
