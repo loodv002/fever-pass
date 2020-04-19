@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/russross/blackfriday"
+	"gopkg.in/russross/blackfriday.v2"
 	"html/template"
 	"io/ioutil"
 
