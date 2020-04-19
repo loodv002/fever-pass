@@ -12,7 +12,7 @@ import (
 func (h Handler) export(records []AccountRecords, w io.Writer) (err error) {
 	enc := csv.NewWriter(w)
 
-	columns := []string{"帳號", "班級", "座號", "姓名", "體溫", "類型", "發燒", "時間"}
+	columns := []string{"帳號", "班級", "座號", "體溫", "類型", "發燒", "時間"}
 	err = enc.Write(columns)
 	if err != nil {
 		panic(err)
@@ -28,7 +28,7 @@ func (h Handler) export(records []AccountRecords, w io.Writer) (err error) {
 }
 
 /*
-"account.id", "class.name","number","account.name","temperature","type","fever","created_at"
+"account.id", "class.name","number","temperature","type","fever","created_at"
 */
 func (r AccountRecords) CSV() []string {
 	data := []string{
