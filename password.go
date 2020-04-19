@@ -89,7 +89,7 @@ func (h Handler) resetPage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if !accountPermission(acct, account) {
-		h.message(w, r, "權限不足", "您沒有權限變更"+account.Name+"的密碼")
+		h.message(w, r, "權限不足", "您沒有權限變更"+account.ID+"的密碼")
 		return
 	}
 
