@@ -6,7 +6,7 @@
 <script src="/static/js/check_password.js"></script>
 <div class="middle">
 <h1>
-{{ if eq $acct.ID .Data.ID }} 重設密碼 {{ else }} 將{{ .Data.Name }}重置為預設密碼 {{ end }}
+{{ if eq $acct.ID .Data.ID }} 重設密碼 {{ else }} 將{{ .Data.ID }}重置為預設密碼 {{ end }}
 </h1>
 {{ with .Data }}
 <form action="/reset" id="form" method="POST">
@@ -20,11 +20,11 @@
         {{ end }}
         <label for="new_password">新的密碼</label>
         <input type="password" name="new_password" required><br>
-        <label for="match_password">驗證密碼</label>
+        <label for="match_password">新的密碼</label>
         <input type="password" name="match_password" oninput="checkPassword()" required><br>
         <input id="reset" disabled type="submit" value="確定">
     {{ else }}
-        <label for="current_passwd">驗證密碼</label>
+        <label for="current_passwd">新的密碼</label>
         <input type="password" name="current_password"><br>
         <input type="submit" value="確定">
     {{ end }}
