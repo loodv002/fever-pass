@@ -8,7 +8,7 @@ import (
 )
 
 func (a Account) defaultPassword() string {
-	return fmt.Sprintln("0000")
+	return fmt.Sprintf(`%s%02d`, a.Class.Name, a.Number)
 }
 
 func generatePassword(password string) []byte {
