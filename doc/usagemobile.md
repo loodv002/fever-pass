@@ -4,7 +4,7 @@
 
 點選左上方的「KKSH體溫記錄系統」即可進入
 
-![](/static/img/0.png)
+<img style='height: 100%; width: 100%; object-fit: contain' src='/static/img/0.jpg'/> 
 
 在紅色標示的格子中輸入當天的體溫，並在綠色標示的選擇溫度種類
 
@@ -28,7 +28,7 @@
 
 點選右上方「≡」展開選單，點擊「統計資料」即可進入
 
-![](/static/img/1.png)
+<img style='height: 100%; width: 100%; object-fit: contain' src='/static/img/1.jpg'/> 
 
 預設顯示當日資料，如需查看過去的資料，，點擊日期並選取，再按下「查詢」
 
@@ -48,7 +48,7 @@
 
 找到目標帳號，點選該帳號右方的「更多資訊」
 
-![](/static/img/2.png)
+<img style='height: 100%; width: 100%; object-fit: contain' src='/static/img/2.jpg'/> 
 
 橘色標示與紅色標示爲該帳號的體溫管理與帳號管理權限，點擊即可更改
 
