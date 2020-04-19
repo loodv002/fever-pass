@@ -5,7 +5,6 @@
         <th>帳號</th>
         <th>班級</th>
         <th>座號</th>
-        <th>姓名</th>
         <th>體溫（℃）</th>
         <th>類型</th>
         <th>時間</th>
@@ -18,7 +17,6 @@
         <tr {{ if .Fever }}class="fever" {{ end }}>
             <td>{{ .Account.ID }}</td>
             <td><a href="/list?class={{ .Account.Class }}">{{ .Account.Class }}</a></td>
-            <td>{{ .Account.Number }}</td>
             <td><a href="/list?account_id={{ .Account.ID }}">{{ .Account }}</a></td>
             <td>{{ .Temperature }}</td>
             <td>{{ .Type }}</td>
