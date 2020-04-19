@@ -1,3 +1,3 @@
 #體溫填報
 
-![alt](/doc/A.png "title")
+![alt](/doc/A.png)
