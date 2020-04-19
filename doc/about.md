@@ -15,7 +15,7 @@ Fever Pass 是一個數位體溫記錄系統。可使用此系統取代紙本體
 
 <iframe class="LikeCoin" height="235" src="https://button.like.co/in/embed/linchpins/button?referrer=https://github.com/Linchpins-team/fever-pass" width="100%" frameborder=0></iframe>
 
-# 意見回饋
+## 意見回饋
 
 1. [GitHub Issue](https://github.com/Linchpins-team/fever-pass/issues) 
 2. Telegram：https://t.me/feverpass
