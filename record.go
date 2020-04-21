@@ -62,7 +62,7 @@ func (r Record) Fever() bool {
 		return r.Temperature >= 37.5
 
 	case Ear:
-		return r.Temperature >= 38
+		return r.Temperature >= 37.5
 	}
 	return false
 }
