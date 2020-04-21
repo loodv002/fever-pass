@@ -34,4 +34,4 @@ inner join (
 inner join records r
 on m.id = r.id
 on a.id = r.account_id
-where (temperature > 38 and type = 1) or (temperature > 37.5 and type = 2);
+where (temperature > 37.5 and type = 1) or (temperature > 37.5 and type = 2);
