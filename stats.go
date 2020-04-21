@@ -37,7 +37,7 @@ func statsQuery(db, base *gorm.DB, t ListType, date time.Time) *gorm.DB {
 
 	case Fevered:
 		return base.Where(
-			"(temperature >= 38 and type = 1) or (temperature >= 37.5 and type = 2)",
+			"(temperature >= 37.5 and type = 1) or (temperature >= 37.5 and type = 2)",
 		)
 
 	case Other:
