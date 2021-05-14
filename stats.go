@@ -133,6 +133,12 @@ func (h Handler) statsList(w http.ResponseWriter, r *http.Request) {
 	}
 	result := selectRecords(statsQuery(h.db, base, t, date))
 
+	//以下更動-----------------------------------------------
+	for i := 0; i < len(result); i++ {
+		result[i].Reason = result[i].String_transform()
+	}
+	//以上更動-----------------------------------------------
+
 	page := make(map[string]interface{})
 	page["Records"] = result
 	page["Type"] = t
