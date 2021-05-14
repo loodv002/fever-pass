@@ -18,6 +18,12 @@ func (h Handler) index(w http.ResponseWriter, r *http.Request) {
 	acct, ok := session(r)
 	if ok {
 		records, _ := h.lastRecords(acct, 3)
+		//以下更動-----------------------------------------------
+		for i := 0; i < len(records); i++ {
+			records[i].Reason = records[i].String_transform()
+		}
+		//以上更動-----------------------------------------------
+
 		h.HTML(w, r, "index.htm", records)
 	} else {
 		http.Redirect(w, r, "/login", 303)
