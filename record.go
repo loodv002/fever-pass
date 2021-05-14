@@ -49,12 +49,34 @@ type Record struct {
 	Type        TempType
 
 	Reason string // If reason is not empty, exclude from stats
+				  // 填報備註
 
 	Account    Account
 	AccountID  string
 	RecordedBy Account `gorm:"foreignkey:RecorderID"`
 	RecorderID string
 }
+//以下更動--------------------------------------------------------------
+func (r Record) String_transform() string {
+	switch r.Reason {
+	case "0":
+		return "病假"
+	case "1":
+		return "事假"
+	case "2":
+		return "公假"
+	case "3":
+		return "喪假"
+	case "4":
+		return "自主健康管理"
+	case "5":
+		return "居家檢疫"
+	case "6":
+		return "居家隔離"
+	}
+	return r.Reason
+}
+//以上更動--------------------------------------------------------------
 
 func (r Record) Fever() bool {
 	switch r.Type {
